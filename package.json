@@ -55,6 +55,13 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
+    "publish": [
+    {
+      "provider": "github",
+      "owner": "NeonGamerBot-QK",
+      "repo": "https://github.com/NeonGamerBot-QK/Annotationapp"
+    }
+  ],
   "author": {
     "name": "Neon",
     "email": "neon@saahild.com",
