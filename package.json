@@ -1,0 +1,74 @@
+{
+  "name": "annotation-tool",
+  "productName": "Annotation-Tool",
+  "version": "0.1.1",
+  "description": "An Electron wrapper for Annotation",
+  "main": "main.js",
+  "build": {
+    "appId": "com.saahild.annotation",
+    "productName": "Annotation-Tool",
+    "linux": {
+      "category": "Development",
+      "desktop": {
+        "Comment": "An Electron wrapper for Annotation",
+        "Name": "Annotation - Electron",
+        "StartupNotify": "true",
+        "Terminal": "false",
+        "Type": "Application",
+        "Categories": "Development;"
+      },
+      "icon": "icon.png",
+      "executableName": "Annotation-Tool",
+      "maintainer": "Neon <neon@saahild.com>",
+      "target": [
+        "deb",
+        "rpm",
+        "AppImage"
+      ]
+    },
+    "deb": {
+      "compression": "bzip2"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": [
+        "dmg"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "license": "LICENSE"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "directories": {
+      "output": "release"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": {
+    "name": "Neon",
+    "email": "neon@saahild.com",
+    "url": "https://saahild.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.7",
+    "electron-builder": "^22.14.5"
+  },
+  "dependencies": {
+    "about-window": "^1.15.2",
+    "electron-store": "^8.0.1",
+    "husky": "^8.0.3",
+    "is-online": "^9.0.1"
+  }
+}
