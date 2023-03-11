@@ -2,15 +2,17 @@ name: Build/release
 
 on:
   workflow_dispatch:
+  
+permissions: read-all|write-all
 
 jobs:
   release:
     runs-on: ${{ matrix.os }}
-
+    environment: production
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest]
-
+ 
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
